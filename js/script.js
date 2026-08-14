@@ -18,7 +18,7 @@ const SITE_DISPLAY_CONFIG = {
   adsEnabled: false,
 
   // BANDE D'URGENCE + SON TEXTE
-  emergencyEnabled: false
+  emergencyEnabled: true
 
 };
 
