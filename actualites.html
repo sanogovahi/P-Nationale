@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Actualités - Police Nationale de Côte d'Ivoire">
+  <title>Actualités - Police Nationale</title>
+  
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="header-container">
+      <div class="logo-section">
+        <img src="images/logo1.png" alt="Logo Police Nationale" class="logo">
+        <div class="header-text">
+          <h1>POLICE NATIONALE</h1>
+          <p class="slogan">Servir Notre Vocation • Merci de Nous Faire Confiance</p>
+        </div>
+      </div>
+      <button class="hamburger" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <ul>
+      <li><a href="index.html">Accueil</a></li>
+      <li>
+        <a href="javascript:void(0)">À Propos</a>
+        <ul>
+          <li><a href="histoire.html">Histoire</a></li>
+          <li><a href="nos-missions.html">Nos Missions</a></li>
+          <li><a href="organisation.html">Organisation</a></li>
+          <li><a href="corps-et-grades.html">Corps et Grades</a></li>
+          </ul>
+      </li>
+      <li>
+        <a href="javascript:void(0)">Services</a>
+        <ul>
+          <li><a href="commissariats.html">Trouver un Commissariat</a></li>
+          <li><a href="urgences.html">Urgences</a></li>
+          <li><a href="declarations.html">Déclarations</a></li>
+        </ul>
+      </li>
+      <li>
+      <a href="javascript:void(0)">Textes et Lois</a>
+        <ul>
+          <li><a href="charte.html">La Charte</a></li>
+          <li><a href= "documents/NOUVEAU_CODE_PENAL_2023.pdf" target="_blank">Code pénal 2023</a></li>
+        </ul>
+        </li>
+      <li><a href="actualites.html">Actualités</a></li>
+      <li><a href="contact.html">Contact</a></li>
+     
+    </ul>
+  </nav>
+
+  <!-- CONTENU PRINCIPAL -->
+  <main>
+    <div class="news-header">
+      <div>
+        <h2 class="page-title">Actualités et Informations</h2>
+        <p class="news-intro">Seules les dernières actualités sont affichées. Recherchez un mot, un nom ou un groupe de mots pour voir toutes les actualités disponibles.</p>
+      </div>
+      <div class="news-search">
+        <input id="newsSearchInput" type="search" placeholder="Rechercher une actualité..." aria-label="Recherche d'actualités">
+        <button id="newsSearchButton" type="button">Recherche</button>
+      </div>
+    </div>
+
+    <section class="news-section">
+      <div class="news-grid">
+        <article class="news-card" data-article-id="1" onclick="window.location.href='actualite-detail.html?id=1'">
+          <div class="news-image">
+            <img src="3N9A1282.JPG" alt="Campagne de sensibilisation 2025" loading="lazy">
+          </div>
+          <div class="news-content">
+            <span class="news-date">28 avril 2025</span>
+            <h3 class="news-title">Campagne de Sensibilisation 2025</h3>
+            <p class="news-description">
+              Lancement d'une grande campagne de sensibilisation aux droits et devoirs civiques dans 
+              les écoles et les quartiers pour renforcer la confiance entre les citoyens et la Police Nationale.
+            </p>
+            <a href="actualite-detail.html?id=1" class="read-more">Lire la suite →</a>
+          </div>
+        </article>
+
+        <article class="news-card" data-article-id="2" onclick="window.location.href='actualite-detail.html?id=2'">
+          <div class="news-image">
+            <img src="3N9A1295.JPG" alt="Formation continue des agents" loading="lazy">
+          </div>
+          <div class="news-content">
+            <span class="news-date">20 avril 2025</span>
+            <h3 class="news-title">Formation Continue des Agents</h3>
+            <p class="news-description">
+              Programme de formation continue pour les agents de police, axé sur l'investigation moderne, 
+              la protection des victimes et le respect des droits humains.
+            </p>
+            <a href="actualite-detail.html?id=2" class="read-more">Lire la suite →</a>
+          </div>
+        </article>
+
+        <article class="news-card" data-article-id="3" onclick="window.location.href='actualite-detail.html?id=3'">
+          <div class="news-image">
+            <video autoplay muted loop playsinline poster="3N9A1282.JPG">
+              <source src="table/FILM POLICE-GIZ PROJET VBG 2025 def_1.mp4" type="video/mp4">
+              Votre navigateur ne prend pas en charge la vidéo.
+            </video>
+          </div>
+          <div class="news-content">
+            <span class="news-date">15 avril 2025</span>
+            <h3 class="news-title">Opération de Sécurité Réussie</h3>
+            <p class="news-description">
+              Les forces de police ont démantelé un réseau de criminalité dans plusieurs quartiers de la capitale,
+              saisissant du matériel illégal et arrêtant 47 suspects.
+            </p>
+            <a href="actualite-detail.html?id=3" class="read-more">Lire la suite →</a>
+          </div>
+        </article>
+
+        <article class="news-card" data-article-id="4" onclick="window.location.href='actualite-detail.html?id=4'">
+          <div class="news-image">
+            <img src="IMG-20250728-WA0049.jpg" alt="Partenariat international" loading="lazy">
+          </div>
+          <div class="news-content">
+            <span class="news-date">10 avril 2025</span>
+            <h3 class="news-title">Partenariat International</h3>
+            <p class="news-description">
+              La Police Nationale renforce la coopération transfrontalière avec ses voisins pour mieux combattre 
+              le crime organisé et la criminalité transnationale.
+            </p>
+            <a href="actualite-detail.html?id=4" class="read-more">Lire la suite →</a>
+          </div>
+        </article>
+
+        <article class="news-card" data-article-id="5" onclick="window.location.href='actualite-detail.html?id=5'">
+          <div class="news-image">
+            <img src="IMG-20250728-WA0052.jpg" alt="Cybersécurité renforcée" loading="lazy">
+          </div>
+          <div class="news-content">
+            <span class="news-date">5 avril 2025</span>
+            <h3 class="news-title">Cybersécurité Renforcée</h3>
+            <p class="news-description">
+              Mise en place d'une unité spécialisée pour lutter contre la fraude en ligne et les délits numériques.
+            </p>
+            <a href="actualite-detail.html?id=5" class="read-more">Lire la suite →</a>
+          </div>
+        </article>
+
+        <article class="news-card" data-article-id="6" onclick="window.location.href='actualite-detail.html?id=6'">
+          <div class="news-image">
+            <img src="IMG-20250728-WA0056.jpg" alt="Assistance aux victimes" loading="lazy">
+          </div>
+          <div class="news-content">
+            <span class="news-date">1er avril 2025</span>
+            <h3 class="news-title">Assistance aux Victimes</h3>
+            <p class="news-description">
+              Nouveau centre d'assistance pour les victimes, proposant orientation juridique, soutien psychologique
+              et aide sociale gratuite.
+            </p>
+            <a href="actualite-detail.html?id=6" class="read-more">Lire la suite →</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="archive-section" class="archive-section" style="display: none;">
+      <div class="archive-header">
+        <div>
+          <h3>Recherche d'actualités</h3>
+          <p>Résultats trouvés pour votre recherche.</p>
+        </div>
+        <div class="archive-clear">
+          <button id="clearSearch" type="button">Effacer</button>
+        </div>
+      </div>
+      <div id="archiveResults" class="news-grid"></div>
+      <p id="archiveEmpty" class="archive-empty" style="display:none;">Aucune actualité correspondante trouvée.</p>
+    </section>
+
+    <section style="background: white; padding: 30px; border-radius: 8px; margin: 30px 0;">
+      <h3>Bulletin d'Information</h3>
+      <p>
+        Restez informé de toutes les actualités de la Police Nationale. Abonnez-vous à notre 
+        bulletin d'information (à venir).
+      </p>
+      <form style="display: flex; gap: 10px; margin-top: 15px;">
+        <input type="email" placeholder="Votre adresse email..." style="flex: 1; padding: 10px; border: 1px solid #ddd; border-radius: 5px;">
+        <button type="button" class="btn">S'abonner</button>
+      </form>
+    </section>
+
+    <div style="text-align: center; margin: 40px 0;">
+      <a href="index.html" class="btn">Retour à l'accueil</a>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>À Propos</h3>
+        <ul>
+          <li><a href="histoire.html">Notre Histoire</a></li>
+          <li><a href="nos-missions.html">Nos Missions</a></li>
+          <li><a href="organisation.html">Organisation</a></li>
+          <li><a href="corps-et-grades.html">Corps et Grades</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Services</h3>
+        <ul>
+          <li><a href="commissariats.html">Trouver un Commissariat</a></li>
+          <li><a href="urgences.html">Urgences</a></li>
+          <li><a href="declarations.html">Déclarations</a></li>
+          <li><a href="contact.html">Nous Contacter</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Informations</h3>
+        <ul>
+          <li><a href="actualites.html">Actualités</a></li>
+          <li><a href="#">Ressources</a></li>
+          <li><a href="#">Mentions Légales</a></li>
+          <li><a href="#">Politique de Confidentialité</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Contact</h3>
+        <ul>
+          <li>📍 Abidjan, Côte d'Ivoire</li>
+          <li>📞 +225 (à compléter)</li>
+          <li>✉️ servicecomdgpn@gmail.com</li>
+          <li>🌐 www.police-nationale.ci</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2024-2025 Police Nationale de Côte d'Ivoire. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const newsCards = Array.from(document.querySelectorAll('.news-card'));
+      const archiveSection = document.getElementById('archive-section');
+      const archiveResults = document.getElementById('archiveResults');
+      const archiveEmpty = document.getElementById('archiveEmpty');
+      const searchInput = document.getElementById('newsSearchInput');
+      const searchButton = document.getElementById('newsSearchButton');
+      const clearButton = document.getElementById('clearSearch');
+
+      const articles = newsCards.map((card, index) => {
+        const title = card.querySelector('.news-title')?.textContent.trim() || '';
+        const description = card.querySelector('.news-description')?.textContent.trim() || '';
+        const date = card.querySelector('.news-date')?.textContent.trim() || '';
+        const icon = card.querySelector('.news-image')?.innerHTML || '';
+        const id = parseInt(card.getAttribute('data-article-id'), 10) || index + 1;
+        return { id, title, description, date, icon, element: card, index };
+      });
+
+      // Afficher seulement les 10 dernières actualités au démarrage
+      articles.forEach(article => {
+        if (article.index >= 10) {
+          article.element.style.display = 'none';
+        }
+      });
+
+    const overlay = document.getElementById('searchOverlay');
+const overlayResults = document.getElementById('overlayResults');
+const overlayEmpty = document.getElementById('overlayEmpty');
+const closeOverlay = document.getElementById('closeOverlay');
+
+function renderSearchResults(results) {
+  overlayResults.innerHTML = '';
+  overlayEmpty.style.display = results.length ? 'none' : 'block';
+
+  results.forEach(article => {
+    const card = document.createElement('article');
+    card.className = 'news-card';
+    card.innerHTML = `
+      <div class="news-image">${article.icon}</div>
+      <div class="news-content">
+        <span class="news-date">${article.date}</span>
+        <h3 class="news-title">${article.title}</h3>
+        <p class="news-description">${article.description}</p>
+        <a href="actualite-detail.html?id=${article.id}" class="read-more">Lire la suite →</a>
+      </div>
+    `;
+    overlayResults.appendChild(card);
+  });
+if (closeOverlay) {
+  closeOverlay.addEventListener('click', function () {
+    overlay.style.display = 'none';
+  });
+}
+
+overlay.addEventListener('click', function (e) {
+  if (e.target === overlay) {
+    overlay.style.display = 'none';
+  }
+});
+
+  overlay.style.display = 'flex';
+}
+      function searchArticles() {
+        const query = searchInput.value.trim().toLowerCase();
+        if (!query) {
+          archiveSection.style.display = 'none';
+          return;
+        }
+
+        const terms = query.split(/\s+/).filter(Boolean);
+        const results = articles.filter(article => {
+          const text = `${article.title} ${article.description} ${article.date}`.toLowerCase();
+          return terms.every(term => text.includes(term));
+        });
+
+        renderSearchResults(results);
+      }
+
+      if (searchButton) {
+        searchButton.addEventListener('click', searchArticles);
+      }
+
+      if (searchInput) {
+        searchInput.addEventListener('keypress', function (event) {
+          if (event.key === 'Enter') {
+            event.preventDefault();
+            searchArticles();
+          }
+        });
+      }
+
+      if (clearButton) {
+        clearButton.addEventListener('click', function () {
+          searchInput.value = '';
+          archiveSection.style.display = 'none';
+          archiveEmpty.style.display = 'none';
+        });
+      }
+    });
+  </script>
+  <script src="js/script.js"></script>
+  <div id="searchOverlay" class="overlay" style="display: none;">
+  <div class="overlay-content">
+    <button id="closeOverlay" class="close-btn">✖</button>
+
+    <h3>Résultats de recherche</h3>
+    <div id="overlayResults" class="news-grid"></div>
+    <p id="overlayEmpty" style="display:none;">Aucune actualité trouvée.</p>
+  </div>
+</div>
+</body>
+</html>

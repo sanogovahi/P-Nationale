@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact - Police Nationale de Côte d'Ivoire">
+  <title>Contact - Police Nationale</title>
+
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+
+<body>
+
+<header>
+  <div class="header-container">
+    <div class="logo-section">
+      <img src="images/logo1.png" alt="Logo Police Nationale" class="logo">
+
+      <div class="header-text">
+        <h1>POLICE NATIONALE</h1>
+        <p class="slogan">
+          Servir Notre Vocation • Merci de Nous Faire Confiance
+        </p>
+      </div>
+    </div>
+
+    <button class="hamburger" aria-label="Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</header>
+
+<nav>
+  <ul>
+    <li><a href="index.html">Accueil</a></li>
+
+    <li>
+      <a href="javascript:void(0)">À Propos</a>
+      <ul>
+        <li><a href="histoire.html">Histoire</a></li>
+        <li><a href="nos-missions.html">Nos Missions</a></li>
+        <li><a href="organisation.html">Organisation</a></li>
+        <li><a href="corps-et-grades.html">Corps et Grades</a></li>
+      </ul>
+    </li>
+
+    <li>
+      <a href="javascript:void(0)">Services</a>
+      <ul>
+        <li><a href="commissariats.html">Trouver un Commissariat</a></li>
+        <li><a href="urgences.html">Urgences</a></li>
+        <li><a href="declarations.html">Déclarations</a></li>
+      </ul>
+    </li>
+
+    <li>
+      <a href="javascript:void(0)">Textes et Lois</a>
+      <ul>
+        <li><a href="charte.html">La Charte</a></li>
+        <li>
+          <a href="documents/NOUVEAU_CODE_PENAL_2023.pdf" target="_blank">
+            Code pénal 2023
+          </a>
+        </li>
+      </ul>
+    </li>
+
+    <li><a href="actualites.html">Actualités</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<main class="internal-page">
+
+  <h2 class="page-title">Nous Contacter</h2>
+
+  <div class="page-grid page-grid-3">
+
+    <section class="section">
+      <h3>📍 Adresse Postale</h3>
+
+      <p>
+        Direction Générale de la Police Nationale<br>
+        Plateau, Place de la République<br>
+        Abidjan<br>
+        République de Côte d'Ivoire
+      </p>
+
+      <p>
+        <strong>BP V 21 Abidjan 01</strong>
+      </p>
+    </section>
+
+    <section class="section">
+      <h3>📞 Téléphone</h3>
+
+      <p>
+        <strong>Direction Générale :</strong><br>
+        +225 (à compléter)
+      </p>
+
+      <p>
+        <strong>Service Communication :</strong><br>
+        +225 (à compléter)
+      </p>
+
+      <p>
+        <strong>Urgences :</strong><br>
+        ☎️ 171, 176, 180
+      </p>
+    </section>
+
+    <section class="section">
+      <h3>✉️ Email</h3>
+
+      <p>
+        <strong>Information générale :</strong><br>
+        <a href="mailto:servicecomdgpn@gmail.com">
+          servicecomdgpn@gmail.com
+        </a>
+      </p>
+
+      <p>
+        <strong>Service Communication :</strong><br>
+        <a href="mailto:servicecomdgpn@gmail.com">
+          servicecomdgpn@gmail.com
+        </a>
+      </p>
+
+      <p>
+        <strong>Plaintes :</strong><br>
+        <a href="mailto:servicecomdgpn@gmail.com">
+          servicecomdgpn@gmail.com
+        </a>
+      </p>
+    </section>
+
+  </div>
+
+  <section class="section">
+
+    <h2>Formulaire de Contact</h2>
+
+    <form class="internal-form">
+
+      <div class="form-group">
+        <label for="name">Nom Complet *</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Adresse Email *</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Téléphone</label>
+        <input type="tel" id="phone" name="phone">
+      </div>
+
+      <div class="form-group">
+        <label for="subject">Sujet *</label>
+
+        <select id="subject" name="subject" required>
+          <option value="">Sélectionnez un sujet...</option>
+          <option value="general">Demande générale</option>
+          <option value="complaint">Plainte</option>
+          <option value="info">Information</option>
+          <option value="other">Autre</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="message">Message *</label>
+
+        <textarea
+          id="message"
+          name="message"
+          rows="6"
+          required
+          placeholder="Veuillez entrer votre message..."
+        ></textarea>
+      </div>
+
+      <div class="form-group checkbox-group">
+
+        <label>
+          <input type="checkbox" name="privacy" required>
+          <span>J'accepte la politique de confidentialité</span>
+        </label>
+
+      </div>
+
+      <button type="submit" class="btn form-submit">
+        Envoyer le Message
+      </button>
+
+    </form>
+
+  </section>
+
+  <section class="section">
+
+    <h2>Horaires d'Ouverture</h2>
+
+    <div class="table-responsive">
+
+      <table>
+
+        <thead>
+          <tr>
+            <th>Jour</th>
+            <th>Horaire</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>Lundi - Vendredi</td>
+            <td>7h00 - 18h00</td>
+          </tr>
+
+          <tr>
+            <td>Samedi</td>
+            <td>7h00 - 18h00</td>
+          </tr>
+
+          <tr>
+            <td>Dimanche</td>
+            <td>Service continu (Urgences uniquement)</td>
+          </tr>
+
+          <tr>
+            <td>Jours Fériés</td>
+            <td>Service continu (Urgences uniquement)</td>
+          </tr>
+        </tbody>
+
+      </table>
+
+    </div>
+
+  </section>
+
+  <section class="section">
+
+    <h2>Nous Suivre sur les Réseaux Sociaux</h2>
+
+    <div class="social-buttons">
+
+      <a href="#" class="btn btn-secondary">Facebook</a>
+      <a href="#" class="btn btn-secondary">Twitter</a>
+      <a href="#" class="btn btn-secondary">Instagram</a>
+      <a href="#" class="btn btn-secondary">YouTube</a>
+      <a href="#" class="btn btn-secondary">LinkedIn</a>
+
+    </div>
+
+  </section>
+
+  <div class="page-return">
+    <a href="index.html" class="btn">
+      Retour à l'accueil
+    </a>
+  </div>
+
+</main>
+
+<footer>
+
+  <div class="footer-container">
+
+    <div class="footer-section">
+      <h3>À Propos</h3>
+      <ul>
+        <li><a href="histoire.html">Notre Histoire</a></li>
+        <li><a href="nos-missions.html">Nos Missions</a></li>
+        <li><a href="organisation.html">Organisation</a></li>
+        <li><a href="corps-et-grades.html">Corps et Grades</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h3>Services</h3>
+      <ul>
+        <li><a href="commissariats.html">Trouver un Commissariat</a></li>
+        <li><a href="urgences.html">Urgences</a></li>
+        <li><a href="declarations.html">Déclarations</a></li>
+        <li><a href="contact.html">Nous Contacter</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h3>Informations</h3>
+      <ul>
+        <li><a href="actualites.html">Actualités</a></li>
+        <li><a href="#">Ressources</a></li>
+        <li><a href="#">Mentions Légales</a></li>
+        <li><a href="#">Politique de Confidentialité</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h3>Contact</h3>
+      <ul>
+        <li>📍 Abidjan, Côte d'Ivoire</li>
+        <li>📞 +225 (à compléter)</li>
+        <li>✉️ servicecomdgpn@gmail.com</li>
+        <li>🌐 www.police-nationale.ci</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>
+      &copy; 2024-2025 Police Nationale de Côte d'Ivoire.
+      Tous droits réservés.
+    </p>
+  </div>
+
+</footer>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>

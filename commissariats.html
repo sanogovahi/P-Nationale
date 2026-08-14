@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Trouver un Commissariat - Police Nationale de Côte d'Ivoire">
+  <title>Trouver un Commissariat - Police Nationale</title>
+  
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/search.css">
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="header-container">
+      <div class="logo-section">
+        <img src="images/logo1.png" alt="Logo Police Nationale" class="logo">
+        <div class="header-text">
+          <h1>POLICE NATIONALE</h1>
+          <p class="slogan">Servir Notre Vocation • Merci de Nous Faire Confiance</p>
+        </div>
+      </div>
+      <button class="hamburger" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <ul>
+      <li><a href="index.html">Accueil</a></li>
+      <li>
+        <a href="javascript:void(0)">À Propos</a>
+        <ul>
+          <li><a href="histoire.html">Histoire</a></li>
+          <li><a href="nos-missions.html">Nos Missions</a></li>
+          <li><a href="organisation.html">Organisation</a></li>
+          <li><a href="corps-et-grades.html">Corps et Grades</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="javascript:void(0)">Services</a>
+        <ul>
+          <li><a href="commissariats.html">Trouver un Commissariat</a></li>
+          <li><a href="urgences.html">Urgences</a></li>
+          <li><a href="declarations.html">Déclarations</a></li>
+        </ul>
+      </li>
+       <li>
+      <a href="javascript:void(0)">Textes et Lois</a>
+        <ul>
+          <li><a href="charte.html">La Charte</a></li>
+         <li><a href= "documents/NOUVEAU_CODE_PENAL_2023.pdf" target="_blank">Code pénal 2023</a></li>
+        </ul>
+        </li>
+      <li><a href="actualites.html">Actualités</a></li>
+      <li><a href="contact.html">Contact</a></li>
+     
+    </ul>
+  </nav>
+
+  <!-- CONTENU PRINCIPAL -->
+  <main>
+    <h2 class="page-title">Trouver un Commissariat</h2>
+<p style="text-align: center;"> La Police Nationale dispose de 12 Prefectures; 18 Districts et 153 Commissariats sur toute l'étendue du territoire </p>
+     <div class="select-container">
+    <select id="communeSelect" onchange="gererSelectionCommune()">
+      <option value="">-- Choisir une commune --</option>
+      <option value="abobo">Abobo</option>
+      <option value="affery">Affery</option>
+      <option value="adjamé">Adjamé</option>
+      <option value="adzope">Adzopé</option>
+      <option value="agboville">Agboville</option>
+      <option value="akoupé">Akoupé</option>
+      <option value="alepe">Alépé</option>
+      <option value="anyama">Anyama</option>
+      <option value="bingerville">Bingerville</option>
+      <option value="cocody">Cocody</option>
+      <option value="dabou">Dabou</option>
+      <option value="grandbassam">Grand Bassam</option>
+      <option value="grandlahou">Grand Lahou</option>
+      <option value="koumassi">Koumassi</option>
+      <option value="macory">Marcory</option>
+      <option value="ndouci">N'douci</option>
+      <option value="plateau">Plateau</option>
+      <option value="portbouet">Port-Bouet</option>
+      <option value="tiassalé">Tiassalé</option>
+      <option value="treichville">Treichville</option>
+      <option value="sikenssi">Sikensi</option>
+      <option value="yopougon">Yopougon</option>
+      <option value="interieure">VILLE DE L'INTÉRIEURE</option>
+    </select>
+
+    <select id="communeInterieureSelect" onchange="gererSelectionCommuneInterieure()">
+      <option value="">-- Choisir une commune intérieure --</option>
+      <option value="abengourou">Abengourou</option>
+      <option value="aboisso">Aboisso</option>
+      <option value="bondoukou">Bondoukou</option>
+      <option value="bouake">Bouaké</option>
+      <option value="daloa">Daloa</option>
+      <option value="gagnoa">Gagnoa</option>
+      <option value="korhogo">Korhogo</option>
+      <option value="man">Man</option>
+      <option value="odienne">Odienné</option>
+      <option value="sanpedro">San-Pedro</option>
+      <option value="yamoussoukro">Yamoussoukro</option>
+    </select>
+  </div>
+   <script>
+    const donnees = {
+      abobo: [ ["13eme", "Abobo Cité Universitaire", "01 61 11 00 54"], 
+              ["14eme", "Abobob plaque 1&2", "01 03 03 27 30"], 
+              ["15eme", " Abobo derière Rail", "01 01 62 15 55"], 
+              ["32eme", "Abobo Avocatier", "07 07 44 47 85"], 
+              ["34eme", "AboboBaoulé", "0101 91 67 82"], 
+              ["39éme","Anokoua kouté Abobo","01 40 85 36 26"],
+              ["41eme", "N'Dotré", "01 71 55 55 76"] 
+            ], 
+      affery: [ ["Commissariat d'Affery", "Affery", "01 43 05 06 43"] ], 
+      alepe: [ ["Commissariat d'Alépé", "Alépé", "01 01 13 03 91"] ], 
+      ndouci: [ ["Commissariat de Ndouci", "N'douci", "01 01 13 03 91"] ],
+      adzope: [ ["Commissariat d'Adzopé", "Adzopé", "01 01 92 89 00"] ],
+      yopougon: [ ["16éme","Yopougon Score","01 03 03 29 47"], 
+                  ["17éme","Niangon Nord Lokoua","01 01 81 15 81"], 
+                  ["19éme","Yopougon toit rouge", "01 53 87 98 41"],
+                  ["23éme","Yopougon Andokoi","01 03 96 85 95"],
+                  ["28éme","Mossikro","01 61 10 98 04"],
+                  ["37éme","Abobo-doumé ","07 08 11 98 43"],
+                  ["38éme","Zone Industriel Yopougon","01 02 56 65 88"] 
+                ],
+      adjamé: [ ["3éme","Adjamé Forum","01 53 41 73 31"], 
+                ["7éme","220 Logements","01 41 58 26 30"], 
+                ["10éme","Attecoubé","01 02 83 83 42"],
+                ["11éme","Williamsville","01 03 10 22 62"], 
+                ["27éme","Adjamé Bracody","01 02 07 77 72"] 
+              ],
+      koumassi : [ ["6éme","Koumassi","01 41 09 16 00"], 
+                   ["20éme","Koumassi camp","01 40 49 23 07"], 
+                   ["36éme","Koumassi Sicogi","01 02 84 68 37" ] ], 
+       macory : [ ["4éme","Zone 4","01 71 10 80 88"],
+                    ["9éme","Marcory","01 42 52 22 22"], 
+                    ["26éme","Macory Aliodan","01 03 37 18 01"], 
+                    ["31éme","Marcory Pergola","01 70 01 02 22"] ],
+      cocody: [ ["8éme","Cocody","01 01 82 86 22"], 
+                ["12éme","Cocody 2 Plateaux","01 03 14 78 59"], 
+                ["18éme","Riviéra","01 53 87 98 36"], 
+                ["22éme","Cocody angré","01 40 66 84 75"], 
+                ["30éme","Cocody Attoban","01 01 01 45 80"],
+                ["35émé", "Riviéra Palmeraie", "01 01 16 44 96"],
+                ["40éme","Angré château","01 01 01 99 22"] ], 
+      portbouet: [ ["5éme","Port-Bouet","01 72 74 84 34"], 
+                   ["24éme"," Port-Bouet adjou,ffou"," 01 61 11 00 69"], 
+                   ["25eme","Vridi","01 01 66 90 32"], 
+                   ["33éme"," Port-Bouet derrière whaf ","01 61 11 00 63"], 
+                   ["42éme"," Port-Bouet Anani"," 01 40 95 85 28"] ], 
+      plateau: [ ["1er","Plateau Cité Administrative","01 02 50 14 31"] ],
+      treichville: [ ["2eme","Treichville","01 01 14 46 76"], 
+                     ["29eme","Treichville Biafra","01 53 41 73 00"] ],
+      grandbassam: [ ["Commissariat de Grand Bassam", "Grand Bassam", "01 71 10 80 79"] ],
+      bingerville: [ ["Commissariat de Bingerville", "Bingerville", "07 07 84 38 04"] ],
+      dabou: [ ["Commissariat de Dabou", "Dabou", "01 41 34 55 47"] ], 
+      tiassalé: [ ["Commissariat de Tiassalé", "Tiassalé", "01 61 10 97 87"] ],
+      anyama: [ ["Commissariat d'Anyama", "Anyama", "01 02 41 17 17"] ], 
+      agboville: [ ["Commissariat d'Agboville", "Agboville", "07 08 49 79 94"] ],
+      akoupé: [ ["Commissariat d'Akoupé", "Akoupé", "27 35 97 04 25"] ], 
+      grandlahou: [ ["Commissariat de Grand Lahou", "Grand Lahou", "01 61 10 55 51"] ],
+      sikenssi: [ ["Commissariat de Sikensi", "Sikensi", "01 01 92 89 00"] ], 
+      abengourou: [ ["1er", "Abengourou", "01 42 47 38 92"],
+                    ["2", "Abengourou", "01 53 42 09 98"], 
+                    ["Commissariat d'Agnibilékro", "Agnibilékro", "01 01 67 52 64"],
+                    ["Commissariat de Niablé", "Niablé", "01 03 58 87 67"] 
+                  ],
+      aboisso: [ ["Commissariat de Tiapoum ", "Tiapoum", "01 01 68 40 86"], 
+                 ["Commissariat de Noé ", "Noé", "07 07 95 58 50"], 
+                 ["Commissariat d'Assinie", " Assinie", "01 02 97 42 79"], 
+                 ["commissariat de MAferé", "Maferé", "01 01 14 44 10"], 
+                 ["commissariat d'Aboisso ", "Aboisso ", "01 01 67 52 64 "],
+                 ["commissariat de Bonoua", "Bonoua ", "01 40 26 97 67"],
+                 ["commissariat d'Adiaké", "Adiaké ", "01 03 48 87 96 "] ], 
+      bondoukou: [ ["Commissariat de Bondoukou", "Bondoukou", "01 03 59 00 74"],
+                   ["Commissariat de Bouna", "Bouna", " 01 42 82 34 35"], 
+                   ["Commissariat de Tanda", "Tanda", "01 01 74 28 74"], 
+                   ["Commissariat de Doropo", "Doropo", "01 40 79 04 77"] ],
+      bouake: [ ["1er","Bouaké", " 01 03 35 92 53 "], 
+                ["2eme","Bouaké", " 01 41 65 27 72 "], 
+                ["3eme","Bouaké", " 01 41 84 61 61 "], 
+                ["4eme","Bouaké", " 01 03 34 93 78 "], 
+                ["5eme","Bouaké", " 01 03 48 84 21 "], 
+                ["6eme","Bouaké", " 01 53 88 49 53 "], 
+                ["Commissariat de Béoumi", "Béoumi", "01 53 88 73 38"],
+                ["Commissariat de Botro", "Botro ", "01 02 67 54 55"], 
+                ["Commissariat de Dabakala", "Dabakala", "01 40 65 82 33"], 
+                ["Commissariat de Katiola", "Katiola", "01 02 92 68 78"],
+                ["Commissariat de Niakara", "Niakara ", "07 58 73 28 45"], 
+                ["Commissariat de Sakassou", "Sakassou", "07 07 35 26 00"] 
+              ], 
+      daloa: [ ["1er","Daloa", "01 50 70 64 64"], 
+               ["2eme","Daloa", "01 40 66 85 96"],
+               ["3eme","Daloa", "01 01 83 64 49"], 
+               ["4eme","Daloa", "01 60 30 33 33"], 
+               ["5eme","Daloa", "07 77 23 00 04"], 
+               ["Commissariat de Issia", "Issia", "07 03 10 80 63"], 
+               ["Commissariat de Saioua", "Saioua", "01 40 65 99 67"], 
+               ["Commissariat de Vavoua", "Vavoua", "01 02 56 45 56"], 
+               ["Commissariat de Zoukougbeu", "Zoukougbeu", "01 43 05 06 66"] 
+            ], 
+      gagnoa: [ ["1er", "Gagnoa ", "01 02 33 92 35"],
+                ["2eme", "Gagnoa ", "01 03 09 63 18"], 
+                ["1er", "Divo ", "01 40 79 08 84"], 
+                ["2eme", "Divo ", "01 01 00 86 64"], 
+                ["Commissariat de Diegonefla", "Diegonefla", "01 01 06 23 94"], 
+                ["Commissariat de Guibéroua", "Guibéroua", "07 48 06 16 58"],
+                ["Commissariat de Hiré", "Hiré ", "01 01 92 89 88"], 
+                ["commissariat de Lakota", "Lakota", "01 40 93 36 42"],
+                ["Commissariat de Oumé", "Oumé", "01 40 65 73 81"], 
+                ["Commissariat de Ouragahio", "Ouragahio ", "01 02 84 52 29"] 
+              ], 
+      korhogo: [ ["1er", "Korogho", "01 02 50 14 99"], 
+                 ["2eme", "Korogho", "07 08 84 51 05"], 
+                 ["Commissariat de Boundiali", "Boundiali ", "07 49 63 09 64"],
+                 ["Commissariat de Dikodougou", "Dikodougou", "01 02 49 83 98 "], 
+                 ["Commissariat de Ferkessédougou", "Ferkessédougou", "01 42 18 83 02"], 
+                 ["Commissariat de Kouto", "Kouto", "01 01 33 25 53"], 
+                 ["Commissariat mixte de Kong", "Kong ", "07 07 63 62 38"], 
+                 ["Commissariat de M'Bengué", "M'Bengué", "01 02 42 46 99 "],
+                 ["Commissariat de Niellé", "Niellé", "01 02 50 07 61"], 
+                 ["Commissariat de Ouangolodougou", "Ouangolodougou", "01 52 79 98 18"], 
+                 ["Commissariat de Tengréla", "Tengréla ", "01 71 10 73 57"] 
+                ], 
+      man: [ ["1er", "Man", "01 01 43 32 23"], 
+             ["2eme", "Man", "01 01 11 42 80"],
+             ["comissariat de Biankouma", "Biankouma", "01 40 79 11 94"],
+             ["comissariat de Bloléquin", "Bloléquin", "01 41 65 27 72"],
+             ["comissariat de Danané", "Danané", "01 02 19 64 30"], 
+             ["comissariat de Duékoue", "Duékoué", "01 01 11 21 50"],
+             ["comissariat de Guiglo", "Guiglo", "01 02 74 01 03"],
+             ["comissariat de Touléplue", "Toulépleu", "01 03 73 72 66"], 
+             ["comissariat de Sipilou", "Sipilou", "01 02 88 11 55"],
+             ["comissariat de Zouan-Hounien", "Zouan-Hounien", "01 43 05 06 67"]
+           ], 
+      odienne: [ ["Commissariat de Odienné", "Odienné", "01 72 03 22 21"],
+                 ["Commissariat de Gbéleban", "Gbéleban", "01 02 83 21 88"],
+                 ["Commissariat de Mankono", "Mankono", "01 01 69 94 70"], 
+                 ["Commissariat de Minignan", "Minignan", "01 03 79 21 12"],
+                 ["Commissariat de Madinani", "Madinani", "07 47 29 97 45"], 
+                 ["Commissariat de Samatiguila", "Samatiguila", "01 71 10 80 67"]
+                 ["Commissariat de Séguéla", "Séguéla", "01 02 66 93 97"],
+                 ["Commissariat de Touba", "Touba", "01 01 51 22 33"], 
+                ],
+      sanpedro: [ ["1er", "San-Pedro", " 01 01 31 78 93"],
+                  ["2eme", "San-Pedro", " 01 41 62 84 91"], 
+                  ["Commissariat de Méagui", "Méagui", "01 02 68 04 12"],
+                  ["Commissariat de Sassandra", "Sassandra", "01 01 24 27 53"],
+                  ["Commissariat de Soubré", "Soubré", "01 40 49 21 80"], 
+                  ["Commissariat de Tabou", "Tabou", "01 73 26 76 26"]
+                ], 
+      yamoussoukro: [ ["1er", "YAMOUSSOUKRO", "01 01 14 46 76"], 
+                      ["2eme", "YAMOUSSOUKRO", "01 40 20 03 88"], 
+                      ["3eme", "YAMOUSSOUKRO", "07 49 64 59 32"],
+                      ["Commissariat de Arrah", "Arrah", "07 49 86 22 80"],
+                      ["Commissariat de Bocanda", "Bocanda", "01 03 23 31 00"], 
+                      ["Commissariat de Bongouanou", "Bongouanou", "01 01 64 20 73"], 
+                      ["Commissariat de Bonon", "Bonon", "01 40 40 08 16"], 
+                      ["Commissariat de Bouaflé", "Bouaflé", "01 40 17 15 85"], 
+                      ["Commissariat de Daoukro", "Daoukro", "01 02 01 22 41"], 
+                      ["Commissariat de Dimbokro", "Dimbokro", "01 01 85 95 49"], 
+                      ["Commissariat de Sinfra", "Sinfra", "01 02 33 29 12"], 
+                      ["Commissariat de Tiébissou", "Tiébissou", "01 03 29 35 28"], 
+                      ["Commissariat de Toumodi", "Toumodi", "01 73 26 76 26"], 
+                      ["Commissariat de Zuénoula", "Zuénoula", "01 01 14 47 71"] 
+                    ], 
+     };
+
+    function afficherResultats(commune) {
+      const tableBody = document.querySelector("#resultatsTable tbody");
+      tableBody.innerHTML = "";
+      if (!donnees[commune]) return;
+      donnees[commune].forEach(row => {
+        const tr = document.createElement("tr");
+        row.forEach((cell, index) => {
+          const td = document.createElement("td");
+          // Mettre en gras les deux premières colonnes (arrondissement et nom)
+          if (index < 2) {
+            td.innerHTML = `<strong>${cell}</strong>`;
+          } else {
+            td.textContent = cell;
+          }
+          tr.appendChild(td);
+        });
+        tableBody.appendChild(tr);
+      });
+    }
+
+    function gererSelectionCommune() {
+      const commune = document.getElementById("communeSelect").value;
+      const resultsSection = document.getElementById("results-section");
+      const hoursSection = document.getElementById("hours-section");
+      const backButton = document.getElementById("back-button");
+      document.getElementById("communeChoisie").textContent = commune || "--";
+      document.getElementById("communeInterieureSelect").style.display = commune === "interieure" ? "inline-block" : "none";
+      
+      // Afficher les résultats, horaires et bouton retour si une commune est sélectionnée
+      if (commune) {
+        if (resultsSection) resultsSection.style.display = "block";
+        if (hoursSection) hoursSection.style.display = "block";
+        if (backButton) backButton.style.display = "block";
+      } else {
+        if (resultsSection) resultsSection.style.display = "none";
+        if (hoursSection) hoursSection.style.display = "none";
+        if (backButton) backButton.style.display = "none";
+      }
+      
+      afficherResultats(commune);
+    }
+
+    function gererSelectionCommuneInterieure() {
+      const commune = document.getElementById("communeInterieureSelect").value;
+      const resultsSection = document.getElementById("results-section");
+      const hoursSection = document.getElementById("hours-section");
+      const backButton = document.getElementById("back-button");
+      document.getElementById("communeChoisie").textContent = commune || "--";
+      
+      // Afficher les résultats, horaires et bouton retour si une commune est sélectionnée
+      if (commune) {
+        if (resultsSection) resultsSection.style.display = "block";
+        if (hoursSection) hoursSection.style.display = "block";
+        if (backButton) backButton.style.display = "block";
+      } else {
+        if (resultsSection) resultsSection.style.display = "none";
+        if (hoursSection) hoursSection.style.display = "none";
+        if (backButton) backButton.style.display = "none";
+      }
+      
+      afficherResultats(commune);
+    }
+  </script>
+  
+  <!-- Section des résultats -->
+  <section id="results-section" style="display: none; background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%); padding: 40px 30px; border-radius: 12px; margin: 30px 0; box-shadow: 0 4px 15px rgba(0, 81, 162, 0.1); border: 1px solid #e8f1ff;">
+    <h3 style="color: #0051a2; font-size: 1.5rem; margin: 0 0 25px 0; font-weight: 700;">Résultats pour : <span id="communeChoisie" style="font-weight: 700; color: #003d7a; font-style: italic;">--</span></h3>
+    <table id="resultatsTable" style="width: 100%; border-collapse: collapse; margin-top: 20px;" class="table-responsive">
+      <thead>
+        <tr style="background: linear-gradient(135deg, #0051a2 0%, #003d7a 100%); color: white;">
+          <th style="padding: 16px 15px; text-align: left; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; font-size: 1rem;">Commissariat</th>
+          <th style="padding: 16px 15px; text-align: left; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; font-size: 1rem;">Localisation</th>
+          <th style="padding: 16px 15px; text-align: left; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; font-size: 1rem;">Téléphone</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+  </section>
+  
+  <script>
+    const themeToggle = document.getElementById('themeToggle');
+    const bodyEl = document.body;
+    if (localStorage.getItem('theme') === 'dark') {
+      bodyEl.classList.add('dark-mode');
+    }
+    if (themeToggle) {
+      themeToggle.textContent = bodyEl.classList.contains('dark-mode') ? '☀️ Mode clair' : '🌙 Mode sombre';
+      themeToggle.addEventListener('click', () => {
+        bodyEl.classList.toggle('dark-mode');
+        if (bodyEl.classList.contains('dark-mode')) {
+          localStorage.setItem('theme', 'dark');
+          themeToggle.textContent = '☀️ Mode clair';
+        } else {
+          localStorage.setItem('theme', 'light');
+          themeToggle.textContent = '🌙 Mode sombre';
+        }
+      });
+    }
+  </script>
+
+    <section style="background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%); padding: 40px 30px; border-radius: 12px; margin: 30px 0; display: none; box-shadow: 0 4px 15px rgba(0, 81, 162, 0.1); border: 1px solid #e8f1ff;" id="hours-section">
+      <h3 style="color: #0051a2; font-size: 1.5rem; margin: 0 0 15px 0; font-weight: 700;">⏰ Horaires Généraux</h3>
+      <p style="color: #555; font-size: 1.05rem; line-height: 1.7; margin: 0;">
+        Les commissariats de police sont généralement ouverts au public du <span style="color: #0051a2; font-weight: 700;">lundi au samedi de 7h à 18h</span>.<br>
+        Pour les situations d'urgence en dehors de ces horaires, composez le <span style="color: #0051a2; font-weight: 700; font-size: 1.1rem;">171</span> ou <span style="color: #0051a2; font-weight: 700; font-size: 1.1rem;">176</span>.
+      </p>
+    </section>
+
+    <div style="text-align: center; margin: 50px 0; display: none;" id="back-button">
+      <a href="index.html" class="btn" style="display: inline-block; background: linear-gradient(135deg, #0051a2 0%, #003d7a 100%); color: white; padding: 14px 40px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 1.05rem; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0, 81, 162, 0.2);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 8px 20px rgba(0, 81, 162, 0.3)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0, 81, 162, 0.2)';">← Retour à l'accueil</a>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>À Propos</h3>
+        <ul>
+          <li><a href="histoire.html">Notre Histoire</a></li>
+          <li><a href="nos-missions.html">Nos Missions</a></li>
+          <li><a href="organisation.html">Organisation</a></li>
+          <li><a href="corps-et-grades.html">Corps et Grades</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Services</h3>
+        <ul>
+          <li><a href="commissariats.html">Trouver un Commissariat</a></li>
+          <li><a href="urgences.html">Urgences</a></li>
+          <li><a href="declarations.html">Déclarations</a></li>
+          <li><a href="contact.html">Nous Contacter</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Informations</h3>
+        <ul>
+          <li><a href="actualites.html">Actualités</a></li>
+          <li><a href="#">Ressources</a></li>
+          <li><a href="#">Mentions Légales</a></li>
+          <li><a href="#">Politique de Confidentialité</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Contact</h3>
+        <ul>
+          <li>📍 Abidjan, Côte d'Ivoire</li>
+          <li>📞 +225 (à compléter)</li>
+          <li>✉️ servicecomdgpn@gmail.com</li>
+          <li>🌐 www.police-nationale.ci</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2024-2025 Police Nationale de Côte d'Ivoire. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/script.js"></script>
+</body>
+</html>
+

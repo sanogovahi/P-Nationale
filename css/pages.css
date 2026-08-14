@@ -1,0 +1,946 @@
+/* =========================================================
+   POLICE NATIONALE - PAGES INTÉRIEURES
+   Style harmonisé avec actualites.html / index.html
+   ========================================================= */
+
+/* =========================================================
+   CONTENEUR PRINCIPAL
+   ========================================================= */
+
+main,
+.internal-page {
+  width: min(94%, 1150px);
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 28px 0 45px;
+  box-sizing: border-box;
+}
+
+main *,
+.internal-page * {
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   TITRES DE PAGE
+   ========================================================= */
+
+.page-title {
+  width: 100%;
+  margin: 0 0 24px;
+  padding: 14px 18px;
+  text-align: center;
+  color: #052366;
+  font-size: clamp(1.45rem, 2.5vw, 2rem);
+  line-height: 1.25;
+  font-weight: 700;
+}
+
+/* =========================================================
+   HERO DES PAGES
+   ========================================================= */
+
+.page-hero {
+  width: 100%;
+  margin: 0 0 25px;
+  padding: 32px 20px;
+  background: linear-gradient(135deg, #052366 0%, #0051a2 100%);
+  color: #fff;
+  text-align: center;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.page-hero h1 {
+  margin: 0;
+  color: #ffd700;
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  line-height: 1.25;
+}
+
+.page-hero p {
+  margin: 12px auto 0;
+  color: #fff;
+  max-width: 850px;
+}
+
+/* =========================================================
+   BLOCS PRINCIPAUX
+   ========================================================= */
+
+.section,
+.new_section,
+.charter-article {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 0 22px;
+  padding: 24px 25px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.section h2,
+.new_section h2 {
+  margin: 0 0 16px;
+  padding-bottom: 10px;
+  color: #0051a2;
+  font-size: clamp(1.25rem, 2vw, 1.55rem);
+  line-height: 1.3;
+  border-bottom: 2px solid #0051a2;
+}
+
+.section h3,
+.new_section h3 {
+  margin: 20px 0 10px;
+  color: #052366;
+  font-size: clamp(1.05rem, 1.7vw, 1.25rem);
+  line-height: 1.35;
+}
+
+.section h3:first-child,
+.new_section h3:first-child {
+  margin-top: 0;
+}
+
+/* =========================================================
+   TEXTES
+   ========================================================= */
+
+main p,
+main li,
+.internal-page p,
+.internal-page li {
+  color: #555;
+  font-size: 0.98rem;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+
+main p,
+.internal-page p {
+  margin-top: 0;
+  margin-bottom: 12px;
+  text-align: justify;
+}
+
+main li,
+.internal-page li {
+  margin-bottom: 7px;
+}
+
+.section p,
+.charter-article p {
+  text-align: justify;
+}
+
+.section ul,
+.section ol,
+.new_section ul,
+.new_section ol {
+  margin: 12px 0;
+  padding-left: 25px;
+}
+
+/* =========================================================
+   LISTE À DEUX COLONNES
+   ========================================================= */
+
+.two-column-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  width: 100%;
+  margin: 20px 0;
+}
+
+.two-column-list ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.two-column-list li {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 9px;
+}
+
+.two-column-list li::before {
+  content: "▶";
+  position: absolute;
+  left: 0;
+  top: 2px;
+  color: #0051a2;
+  font-size: 0.75rem;
+}
+
+/* =========================================================
+   GRILLES
+   ========================================================= */
+
+.page-grid {
+  display: grid;
+  width: 100%;
+  max-width: 100%;
+  gap: 18px;
+  margin: 20px 0;
+}
+
+.page-grid-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.page-grid-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.page-grid-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+/* =========================================================
+   CARTES
+   ========================================================= */
+
+.contact-card,
+.person-card {
+  min-width: 0;
+  width: 100%;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.contact-card {
+  padding: 18px;
+}
+
+.contact-card h4 {
+  margin: 0 0 10px;
+  color: #0051a2;
+  font-size: 1.05rem;
+  line-height: 1.35;
+}
+
+.contact-card p {
+  margin-bottom: 8px;
+}
+
+/* =========================================================
+   PERSONNES / GRADES
+   ========================================================= */
+
+.people-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  width: 100%;
+  margin: 25px 0;
+}
+
+.person-card {
+  text-align: center;
+  border: 2px solid #f0f0f0;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.person-card:hover {
+  transform: translateY(-4px);
+  border-color: #0051a2;
+  box-shadow: 0 5px 14px rgba(0, 0, 0, 0.12);
+}
+
+.person-image {
+  display: block;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  background: linear-gradient(135deg, #052366, #0051a2);
+}
+
+.person-info {
+  padding: 15px;
+}
+
+.person-title {
+  margin: 0;
+  color: #0051a2;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.person-name {
+  margin: 5px 0 0;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+/* =========================================================
+   ORGANIGRAMME
+   ========================================================= */
+
+.org-chart {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+  width: 100%;
+  margin: 25px 0;
+}
+
+.org-item {
+  width: 100%;
+  padding: 18px;
+  background: linear-gradient(135deg, #0051a2, #052366);
+  color: #fff;
+  border-radius: 8px;
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+
+.org-item .grade {
+  margin-bottom: 5px;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.org-item .description {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  opacity: 0.95;
+}
+
+/* =========================================================
+   TIMELINE
+   ========================================================= */
+
+.timeline {
+  position: relative;
+  width: 100%;
+  padding: 20px 0;
+  margin: 25px 0;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 3px;
+  background: #0051a2;
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  position: relative;
+  width: 45%;
+  margin-bottom: 30px;
+}
+
+.timeline-item:nth-child(odd) {
+  margin-left: 0;
+  padding-right: 45px;
+  text-align: right;
+}
+
+.timeline-item:nth-child(even) {
+  margin-left: 55%;
+  padding-left: 45px;
+}
+
+.timeline-content {
+  background: #fff;
+  padding: 18px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.timeline-date {
+  margin-bottom: 7px;
+  color: #0051a2;
+  font-weight: 700;
+}
+
+.timeline-title {
+  margin: 0 0 8px;
+  color: #052366;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.timeline-description {
+  margin: 0;
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* =========================================================
+   CHARTE
+   ========================================================= */
+
+.charter-article {
+  border-left: 4px solid #0051a2;
+}
+
+.charter-article h3 {
+  margin: 0 0 15px;
+  color: #0051a2;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+/* =========================================================
+   URGENCES
+   ========================================================= */
+
+.emergency-box {
+  width: 100%;
+  min-width: 0;
+  margin: 0 0 20px;
+  padding: 22px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.emergency-box h3 {
+  margin: 0 0 12px;
+  color: #0051a2;
+  font-size: clamp(1.05rem, 2vw, 1.4rem);
+}
+
+.emergency-box .number {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  color: #052366;
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  font-weight: 700;
+  text-align: center;
+  background: #f5f7fb;
+  border-radius: 6px;
+  overflow-wrap: anywhere;
+}
+
+/* =========================================================
+   FORMULAIRES
+   ========================================================= */
+
+.internal-form,
+main form {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.form-group {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 15px;
+}
+
+main label,
+.internal-form label {
+  display: block;
+  margin-bottom: 6px;
+  color: #333;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+main input:not([type="checkbox"]):not([type="radio"]),
+main select,
+main textarea,
+.internal-form input:not([type="checkbox"]):not([type="radio"]),
+.internal-form select,
+.internal-form textarea {
+  width: 100%;
+  max-width: 100%;
+  padding: 11px 13px;
+  color: #333;
+  font-family: inherit;
+  font-size: 0.96rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  outline: none;
+}
+
+main input:focus,
+main select:focus,
+main textarea:focus,
+.internal-form input:focus,
+.internal-form select:focus,
+.internal-form textarea:focus {
+  border-color: #0051a2;
+  box-shadow: 0 0 0 2px rgba(0, 81, 162, 0.08);
+}
+
+main textarea,
+.internal-form textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.checkbox-group label {
+  display: flex !important;
+  align-items: center;
+  gap: 8px;
+  font-weight: normal !important;
+}
+
+.checkbox-group input {
+  width: auto !important;
+  flex-shrink: 0;
+}
+
+/* =========================================================
+   TABLEAUX
+   ========================================================= */
+
+.table-responsive {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+main table,
+.internal-page table {
+  width: 100%;
+  max-width: 100%;
+  border-collapse: collapse;
+}
+
+main th,
+main td,
+.internal-page th,
+.internal-page td {
+  padding: 10px 12px;
+  color: #555;
+  font-size: 0.94rem;
+  line-height: 1.45;
+  border-bottom: 1px solid #eee;
+  overflow-wrap: anywhere;
+}
+
+main th,
+.internal-page th {
+  color: #fff;
+  background: #0051a2;
+  font-weight: 700;
+}
+
+/* =========================================================
+   BOUTONS
+   ========================================================= */
+
+main .btn,
+.internal-page .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 9px 17px;
+  color: #fff;
+  font-size: 0.92rem;
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.action-buttons,
+.social-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  margin-top: 18px;
+}
+
+.page-return {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 30px 0 5px;
+}
+
+/* =========================================================
+   IMAGES / VIDÉOS / IFRAMES
+   ========================================================= */
+
+main img,
+main video,
+main iframe,
+.internal-page img,
+.internal-page video,
+.internal-page iframe {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+main video,
+.internal-page video {
+  width: 100%;
+  border-radius: 6px;
+}
+
+/* =========================================================
+   ÉVITER LES DÉBORDEMENTS
+   ========================================================= */
+
+main,
+.internal-page,
+main section,
+.internal-page section,
+main article,
+.internal-page article,
+main div,
+.internal-page div {
+  min-width: 0;
+}
+
+main *,
+.internal-page * {
+  overflow-wrap: anywhere;
+}
+
+/* =========================================================
+   TABLETTES
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  main,
+  .internal-page {
+    width: 94%;
+    padding-top: 22px;
+  }
+
+  .section,
+  .new_section,
+  .charter-article {
+    padding: 20px;
+  }
+
+  .page-grid-3,
+  .page-grid-4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .two-column-list {
+    grid-template-columns: 1fr;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  main p,
+  main li,
+  .internal-page p,
+  .internal-page li {
+    font-size: 0.95rem;
+    line-height: 1.65;
+  }
+}
+
+/* =========================================================
+   TÉLÉPHONES
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  main,
+  .internal-page {
+    width: 94%;
+    padding: 18px 0 35px;
+  }
+
+  .page-title {
+    margin-bottom: 18px;
+    padding: 12px 10px;
+    font-size: 1.45rem;
+  }
+
+  .page-hero {
+    margin-bottom: 18px;
+    padding: 24px 15px;
+    border-radius: 7px;
+  }
+
+  .page-hero h1 {
+    font-size: 1.5rem;
+  }
+
+  .section,
+  .new_section,
+  .charter-article {
+    padding: 16px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+  }
+
+  .section h2,
+  .new_section h2 {
+    margin-bottom: 13px;
+    font-size: 1.2rem;
+  }
+
+  .section h3,
+  .new_section h3 {
+    font-size: 1.05rem;
+  }
+
+  main p,
+  main li,
+  .internal-page p,
+  .internal-page li {
+    font-size: 0.92rem;
+    line-height: 1.6;
+    text-align: justify;
+  }
+
+  .page-grid-2,
+  .page-grid-3,
+  .page-grid-4 {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .people-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  .person-image {
+    height: 150px;
+  }
+
+  .person-info {
+    padding: 12px 8px;
+  }
+
+  .person-title {
+    font-size: 0.9rem;
+  }
+
+  .person-name {
+    font-size: 0.85rem;
+  }
+
+  .timeline {
+    padding: 10px 0;
+  }
+
+  .timeline::before {
+    left: 15px;
+    transform: none;
+  }
+
+  .timeline-item,
+  .timeline-item:nth-child(odd),
+  .timeline-item:nth-child(even) {
+    width: 100%;
+    margin-left: 0;
+    padding-left: 45px;
+    padding-right: 0;
+    text-align: left;
+  }
+
+  .timeline-content {
+    padding: 15px;
+  }
+
+  .emergency-box {
+    padding: 17px;
+  }
+
+  .emergency-box h3 {
+    font-size: 1.05rem;
+  }
+
+  .emergency-box .number {
+    font-size: 1.2rem;
+    padding: 9px;
+  }
+
+  .contact-card {
+    padding: 15px;
+  }
+
+  .internal-form,
+  main form {
+    width: 100%;
+  }
+
+  main .btn,
+  .internal-page .btn {
+    width: 100%;
+    min-height: 42px;
+  }
+
+  .action-buttons,
+  .social-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .action-buttons .btn,
+  .social-buttons .btn {
+    width: 100%;
+  }
+
+  main th,
+  main td,
+  .internal-page th,
+  .internal-page td {
+    padding: 8px 7px;
+    font-size: 0.86rem;
+  }
+
+  .table-responsive {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+/* =========================================================
+   TRÈS PETITS ÉCRANS
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+  main,
+  .internal-page {
+    width: 95%;
+  }
+
+  .people-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .person-image {
+    height: 180px;
+  }
+
+  .page-hero h1 {
+    font-size: 1.3rem;
+  }
+
+  .section,
+  .new_section,
+  .charter-article {
+    padding: 14px;
+  }
+}
+/* =========================================================
+   JUSTIFICATION DES TEXTES DES PAGES
+   S'applique aux textes descriptifs, introductions,
+   informations et paragraphes similaires
+   ========================================================= */
+
+/* Paragraphes généraux */
+main p,
+.internal-page p {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+/* Textes d'introduction */
+.news-intro,
+.page-intro,
+.section-intro,
+.description,
+.intro,
+.subtitle,
+.page-description {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+/* Texte situé dans les blocs */
+main .section p,
+main .new_section p,
+main .charter-article p,
+.internal-page .section p,
+.internal-page .new_section p,
+.internal-page .charter-article p,
+.page-hero p {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+/* Descriptions des cartes */
+.news-description,
+.contact-card p,
+.person-name,
+.timeline-description {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+/* Textes des listes */
+main li,
+.internal-page li,
+.section li,
+.new_section li {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+/* =========================================================
+   ACTUALITÉS
+   ========================================================= */
+
+.news-intro {
+  line-height: 1.7;
+}
+
+/* Description des actualités */
+.news-description {
+  line-height: 1.65;
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  main p,
+  .internal-page p,
+  .news-intro,
+  .page-intro,
+  .section-intro,
+  .description,
+  .intro,
+  .subtitle,
+  .page-description,
+  .news-description,
+  .contact-card p,
+  .timeline-description {
+    text-align: justify;
+    text-justify: inter-word;
+  }
+}
