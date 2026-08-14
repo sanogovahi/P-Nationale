@@ -12,7 +12,7 @@
 
 /* Animation optionnelle (comme bannière) */
 #ads-wrapper {
-  transition: all 10s ease;
+  transition: all 0.5s ease;
 }
 /* Zone pub */
 /* TABLETTE */
@@ -146,7 +146,7 @@ main {
 .emergency-text {
   display: inline-block;
   padding-left: 100%;
-  animation: scrollMessage 30s linear infinite;
+  animation: scrollMessage 20s linear infinite;
 }
 
 @keyframes scrollMessage {
@@ -2488,7 +2488,7 @@ body {
 
     box-sizing: border-box !important;
 
-    animation: emergencyScroll 12s linear infinite !important;
+    animation: emergencyScroll 10s linear infinite !important;
 
     will-change: transform !important;
 }
@@ -2666,7 +2666,7 @@ body {
 
     white-space: nowrap !important;
 
-    animation: emergencyScrollContinuous 15s linear infinite !important;
+    animation: emergencyScrollContinuous 10s linear infinite !important;
 
     will-change: transform;
 }
