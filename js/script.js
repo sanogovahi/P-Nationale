@@ -18,7 +18,7 @@ const SITE_DISPLAY_CONFIG = {
   adsEnabled: false,
 
   // BANDE D'URGENCE + SON TEXTE
-  emergencyEnabled: true
+  emergencyEnabled: false
 
 };
 
@@ -101,25 +101,69 @@ document.addEventListener("DOMContentLoaded", async function () {
 
 
   // ========================================
-  // MENU HAMBURGER
+  // MENU RESPONSIVE - HAMBURGER + SOUS-MENUS
   // ========================================
 
-  const hamburger =
-    document.querySelector(".hamburger");
-
-  const nav =
-    document.querySelector("nav");
+  const hamburger = document.querySelector(".hamburger");
+  const nav = document.querySelector("nav");
+  const menuPrincipal = nav ? nav.querySelector(":scope > ul") : null;
 
   if (hamburger && nav) {
 
-    hamburger.addEventListener("click", function () {
+    function fermerMenuPrincipal() {
+      hamburger.classList.remove("active");
+      nav.classList.remove("active");
+      nav.querySelectorAll(":scope > ul > li.active").forEach(li => {
+        li.classList.remove("active");
+      });
+    }
 
+    hamburger.addEventListener("click", function (event) {
+      event.preventDefault();
+      event.stopPropagation();
       hamburger.classList.toggle("active");
-
       nav.classList.toggle("active");
-
     });
 
+    if (menuPrincipal) {
+      menuPrincipal.querySelectorAll(":scope > li").forEach(li => {
+        const lienParent = li.querySelector(":scope > a");
+        const sousMenu = li.querySelector(":scope > ul");
+        if (!lienParent || !sousMenu) return;
+
+        lienParent.addEventListener("click", function (event) {
+          if (window.innerWidth <= 1024) {
+            event.preventDefault();
+            event.stopPropagation();
+            const etaitOuvert = li.classList.contains("active");
+            menuPrincipal.querySelectorAll(":scope > li.active").forEach(other => {
+              if (other !== li) other.classList.remove("active");
+            });
+            li.classList.toggle("active", !etaitOuvert);
+          }
+        });
+      });
+
+      menuPrincipal.querySelectorAll(":scope > li > ul a").forEach(lien => {
+        lien.addEventListener("click", function () {
+          if (window.innerWidth <= 1024) fermerMenuPrincipal();
+        });
+      });
+
+      menuPrincipal.querySelectorAll(":scope > li > a:not([href])").forEach(lien => {
+        lien.addEventListener("click", function (event) { event.preventDefault(); });
+      });
+    }
+
+    document.addEventListener("click", function (event) {
+      if (window.innerWidth <= 1024 && nav.classList.contains("active")) {
+        if (!nav.contains(event.target) && !hamburger.contains(event.target)) fermerMenuPrincipal();
+      }
+    });
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape") fermerMenuPrincipal();
+    });
   }
 
 
